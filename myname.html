@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+        margin: 0%;
+        background-image: url('https://th.bing.com/th/id/OIP.iu9c2qJtuoCOO6KiLosZKgHaEK?pid=ImgDet&rs=1');
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        .container{
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        height: 200px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(208, 231, 189);
+        border-radius: 10px;
+        }
+        .btn1{
+
+        border: none;
+        padding: 10px;
+        background-color: rgb(7, 58, 58);
+        color: rgb(211, 224, 224);
+        border-radius: 20%;
+        margin: 10px;
+        box-shadow: 3px 2px 3px rgb(87, 82, 82);
+        }
+        .structure{
+        visibility: visible;
+        background: none;
+        margin: 0 0 10px 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        font-size: large;
+        border-radius: 10%;
+        color: rgb(4, 43, 71);
+        text-shadow:2px 2px 4px rgb(119, 133, 63);
+
+        }
+        .cross{
+            visibility: hidden;
+            background-color: rgb(4, 43, 71) ;
+            border: none;
+            color: aliceblue;
+            font-size: large;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .p1{
+            visibility: hidden;
+        }
+        .p{
+            visibility: hidden;
+        }
+        .show{
+            visibility: hidden;
+        }
+        .back{
+            visibility: visible;
+            background-color: rgb(4, 43, 71) ;
+            border: none;
+            color: aliceblue;
+            font-size: large;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .after{
+            visibility: visible;
+            background: none;
+            margin: 0 0 10px 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 700;
+            font-size: large;
+            border-radius: 10%;
+            color: rgb(4, 43, 71);
+            text-shadow:2px 2px 4px rgb(119, 133, 63); 
+            text-transform: capitalize;
+            text-align: center;
+        }
+        @media screen and ( max-width: 1058px ) {
+            body{
+        margin: 0%;
+        background-image:  url('https://th.bing.com/th/id/OIP.fATGsJ0_GTGmiRA14p95wwHaEK?pid=ImgDet&rs=1');
+        background-size: 100vh 100vh;
+        background-repeat: no-repeat;
+        
+        }
+        .container{
+            box-shadow: 0 0 20px rgb(66, 63, 63);
+        position: fixed;
+        top: 30%;
+        left: 25%;
+        height: 200px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(208, 231, 189);
+    border-radius: 10%;
+        }
+        }
+        @media screen and ( max-width: 488px ) {
+            body{
+        margin: 0%;
+        background-image:  url('https://th.bing.com/th/id/OIP.fATGsJ0_GTGmiRA14p95wwHaEK?pid=ImgDet&rs=1');
+        background-size: 100vh 100vh;
+        background-repeat: no-repeat;
+        
+        }
+        .container{
+            box-shadow: 0 0 20px rgb(66, 63, 63);
+        position: fixed;
+        top: 30%;
+        left: 15%;
+        height: 200px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(208, 231, 189);
+    border-radius: 10%;
+        }
+        }
+
+        /*open */
+    </style>
+    <title>side bar</title>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <p class="structure">little surprise</p>
+        <p class="p1">tu pagal</p>
+        <button class="btn1">show model</button>
+        <button class="cross">&times;</button>
+
+    </div>
+<script>
+   let p = document.querySelector(".structure");
+   let btn1 = document.querySelector(".btn1");
+   let btn2 = document.querySelector(".cross");
+   let p1 = document.querySelector(".p1");
+
+
+   btn1.addEventListener("click", ()=>{
+    p.classList.toggle("p");
+    btn1.classList.toggle("show");
+    btn2.classList.toggle("back");
+    p1.classList.toggle("after");
+   })
+
+   
+   btn2.addEventListener("click", ()=>{
+  p.classList.remove("p");
+ btn1.classList.remove("show");
+ p1.classList.remove("after");
+ btn2.classList.remove("back");
+ 
+ })
+ 
+
+</script>
+</div>
+</body>
+</html>
